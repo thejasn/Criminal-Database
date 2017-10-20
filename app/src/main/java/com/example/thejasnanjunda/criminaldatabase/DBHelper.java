@@ -1,3 +1,5 @@
+package com.example.thejasnanjunda.criminaldatabase;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
@@ -17,22 +19,23 @@ import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static final int DB_version =1;
+    private static final int DB_version =2;
 
     private static final String DATABASE_NAME = "criminalDatabase";
     private static final String TABLE_CRIMINAL = "PRISONERS";
-    private static final String P_UID = Resources.getSystem().getString(R.string.PCOL0);
-    private static final String PF_NAME = Resources.getSystem().getString(R.string.PCOL1);
-    private static final String PL_NAME = Resources.getSystem().getString(R.string.PCOL3);
-    private static final String PM_NAME = Resources.getSystem().getString(R.string.PCOL2);
-    private static final String P_AGE = Resources.getSystem().getString(R.string.PCOL4) , P_DOB = Resources.getSystem().getString(R.string.PCOL5);
-    private static final String P_LAddr = Resources.getSystem().getString(R.string.PCOL6);
-    private static final String P_CADDR = Resources.getSystem().getString(R.string.PCOL7);
-    private static final String P_FATHER = Resources.getSystem().getString(R.string.PCOL8), P_MOTHER = Resources.getSystem().getString(R.string.PCOL9);
-    private static final String P_RELATIVE = Resources.getSystem().getString(R.string.PCOL10);
-    private static final String P_CRIMES = Resources.getSystem().getString(R.string.PCOL11);
-    private static final String P_ASSOC = Resources.getSystem().getString(R.string.PCOL12);
-    private static final String P_SENTENCE = Resources.getSystem().getString(R.string.PCOL13);
+    private static final String P_UID = "uid";
+    private static final String PF_NAME ="f_name";
+    private static final String PL_NAME = "m_name";
+    private static final String PM_NAME = "l_name";
+    private static final String P_AGE = "age";
+    private static final  String P_DOB = "DOB";
+    private static final String P_LAddr = "last_address";
+    private static final String P_CADDR = "curr_address";
+    private static final String P_FATHER = "father_name", P_MOTHER = "mother_name";
+    private static final String P_RELATIVE = "relatives";
+    private static final String P_CRIMES = "crimes";
+    private static final String P_ASSOC = "assoiciates";
+    private static final String P_SENTENCE = "sentence";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DB_version);
@@ -46,7 +49,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         String CREATE_PRISONER_TABLE = "CREATE TABLE " + TABLE_CRIMINAL + "("
-                + P_UID + " INTEGER PRIMARY KEY,"
+                + P_UID + " INTEGER ,"
                 + PF_NAME + " TEXT," + PM_NAME + " TEXT," + PL_NAME + " TEXT,"
                 + P_AGE + " INTEGER," + P_DOB + " TEXT,"
                 + P_LAddr + " TEXT," + P_CADDR + " TEXT,"
@@ -59,7 +62,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CRIMINAL);
+        onCreate(db);
     }
     public void addPrisoner(Criminal criminal)
     {

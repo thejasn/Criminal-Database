@@ -1,28 +1,32 @@
+package com.example.thejasnanjunda.criminaldatabase;
+
 /**
  * Created by Thejas Nanjunda on 20-10-2017.
  */
 
 public class Criminal {
+    private int UID;
     private String f_name,m_name,l_name;
-    private int age,UID;
-    private String father_name,mother_name,last_address,curr_address;
+    private int age;
+    private String DOB,last_address,curr_address,father_name,mother_name;
+    private String relatives,crimes,associated;
     private int current_prison_sentence;
-    private String relatives,crimes,associated,DOB;
 
-    public Criminal(String f_name, String m_name, String l_name, int age, String father_name, String mother_name, String last_address, String curr_address, int current_prison_sentence, String relatives, String crimes, String associated, String DOB) {
+    public Criminal(int UID, String f_name, String m_name, String l_name, int age, String DOB, String last_address, String curr_address, String father_name, String mother_name, String relatives, String crimes, String associated, int current_prison_sentence) {
+        this.UID = UID;
         this.f_name = f_name;
         this.m_name = m_name;
         this.l_name = l_name;
         this.age = age;
-        this.father_name = father_name;
-        this.mother_name = mother_name;
+        this.DOB = DOB;
         this.last_address = last_address;
         this.curr_address = curr_address;
-        this.current_prison_sentence = current_prison_sentence;
+        this.father_name = father_name;
+        this.mother_name = mother_name;
         this.relatives = relatives;
         this.crimes = crimes;
         this.associated = associated;
-        this.DOB = DOB;
+        this.current_prison_sentence = current_prison_sentence;
     }
 
     public Criminal() {

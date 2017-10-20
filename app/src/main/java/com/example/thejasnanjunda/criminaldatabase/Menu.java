@@ -1,6 +1,7 @@
 package com.example.thejasnanjunda.criminaldatabase;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +17,19 @@ public class Menu extends AppCompatActivity {
         insert = (Button) findViewById(R.id.Insert);
         search = (Button) findViewById(R.id.Search);
         view  = (Button) findViewById(R.id.view);
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("SAVED_UID",MODE_PRIVATE);
+        if(!sp.contains("PRISONER_UID"))
+        {
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putInt("PRISONER_UID",0);
+            editor.commit();
+        }
 
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this,Inserting.class));
+
             }
         });
         /*search.setOnClickListener(new View.OnClickListener() {
@@ -28,13 +37,13 @@ public class Menu extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(Menu.this,Searching.class));
             }
-        });
+        });*/
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Menu.this,viewing.class));
+                startActivity(new Intent(Menu.this,Viewing.class));
             }
-        });*/
+        });
     }
 
 }
