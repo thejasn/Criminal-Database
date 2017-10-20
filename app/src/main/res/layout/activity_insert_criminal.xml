@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thejasnanjunda.criminaldatabase.insert_criminal">
+
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="120dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0">
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/fName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="First Name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_mname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/mName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Middle Name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/lName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Last Name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_father_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/FatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father's Name" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_mother_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/MotherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mother's Name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/sub_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" >
+
+
+                    <EditText
+                        android:id="@+id/dob"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:hint="DOB - dd/mm/yyyy" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_age"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="match_parent">
+
+
+                    <EditText
+                        android:id="@+id/age"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:hint="Age"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_last_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/lAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:hint="Last Address" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_curr_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/currAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:hint="Current Address" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_curr_prison"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/Prison"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Current Prison" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
