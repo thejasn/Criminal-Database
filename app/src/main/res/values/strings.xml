@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Criminal Database</string>
+    <string name="PCOL0">uid</string>
+    <string name="PCOL1">f_name</string>
+    <string name="PCOL2">m_name</string>
+    <string name="PCOL3">l_name</string>
+    <string name="PCOL4">age</string>
+    <string name="PCOL5">DOB</string>
+    <string name="PCOL6">last_address</string>
+    <string name="PCOL7">curr_address</string>
+    <string name="PCOL8">father_name</string>
+    <string name="PCOL9">mother_name</string>
+    <string name="PCOL10">relatives</string>
+    <string name="PCOL11">crimes</string>
+    <string name="PCOL12">associates</string>
+    <string name="PCOL13">sentence</string>
+
+
 </resources>
