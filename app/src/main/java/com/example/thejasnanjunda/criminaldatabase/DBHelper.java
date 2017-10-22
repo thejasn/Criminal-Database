@@ -19,7 +19,7 @@ import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static final int DB_version =2;
+    private static final int DB_version =3;
 
     private static final String DATABASE_NAME = "criminalDatabase";
     private static final String TABLE_CRIMINAL = "PRISONERS";
