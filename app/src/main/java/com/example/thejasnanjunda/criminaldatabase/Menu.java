@@ -24,7 +24,18 @@ public class Menu extends AppCompatActivity {
             editor.putInt("PRISONER_UID",0);
             editor.commit();
         }
-
+        if(!sp.contains("GUARD_uid"))
+        {
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putInt("GUARD_UID",0);
+            editor.commit();
+        }
+        if(!sp.contains("VISITOR_uid"))
+        {
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putInt("VISITOR_UID",0);
+            editor.commit();
+        }
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -20,7 +20,14 @@
         </activity>
         <activity android:name=".Menu" />
         <activity android:name=".Inserting" />
-        <activity android:name=".insert_criminal"></activity>
+        <activity android:name=".insert_criminal" />
+        <activity android:name=".Viewing" />
+        <activity android:name=".view_Criminal" />
+        <activity android:name=".insert_guards" />
+        <activity android:name=".insert_visitor" />
+        <activity android:name=".view_Guard" />
+        <activity android:name=".VisitorAdapter" />
+        <activity android:name=".view_Visitor"></activity>
     </application>
 
 </manifest>

@@ -70,9 +70,9 @@ public class CriminalAdapter extends RecyclerView.Adapter<CriminalAdapter.MyView
             dob = (TextView) itemView.findViewById(R.id.DOB);
 
             label0 = (TextView) itemView.findViewById(R.id.label0);
-           label1= (TextView) itemView.findViewById(R.id.label1);
+            label1= (TextView) itemView.findViewById(R.id.label1);
             label2 = (TextView) itemView.findViewById(R.id.label2);
-           label3  = (TextView) itemView.findViewById(R.id.label3);
+            label3  = (TextView) itemView.findViewById(R.id.label3);
             label4 = (TextView) itemView.findViewById(R.id.label4);
             label5 =(TextView) itemView.findViewById(R.id.label5);
             label6= (TextView) itemView.findViewById(R.id.label6);

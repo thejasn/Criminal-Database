@@ -42,6 +42,8 @@ public class Viewing extends AppCompatActivity{
     private void setupViewPager(ViewPager viewPager) {
        Viewing.ViewPagerAdapter adapter = new Viewing.ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new  view_Criminal(), "Criminal");
+        adapter.addFragment( new view_Guard(),"Guard");
+        adapter.addFragment(new view_Visitor(),"Visitor");
         viewPager.setAdapter(adapter);
     }
     class ViewPagerAdapter extends FragmentPagerAdapter {

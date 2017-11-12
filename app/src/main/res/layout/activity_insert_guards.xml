@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.thejasnanjunda.criminaldatabase.insert_criminal">
-
+    tools:context="com.example.thejasnanjunda.criminaldatabase.insert_guards">
 
     <ScrollView
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_marginBottom="8dp"
-    android:layout_marginTop="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.31">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
 
         <LinearLayout
-            android:id="@+id/mainLayout"
+            android:id="@+id/mainGuardLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
@@ -37,12 +36,12 @@
             app:layout_constraintVertical_bias="1.0">
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_fname"
+                android:id="@+id/input_layout_Gfname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/fName"
+                    android:id="@+id/GfName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="First Name" />
@@ -50,12 +49,12 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_mname"
+                android:id="@+id/input_layout_Gmname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/mName"
+                    android:id="@+id/GmName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Middle Name" />
@@ -63,12 +62,12 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_lname"
+                android:id="@+id/input_layout_Glname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/lName"
+                    android:id="@+id/GlName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Last Name" />
@@ -76,46 +75,33 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_father_name"
+                android:id="@+id/input_layout_Gfather_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/FatherName"
+                    android:id="@+id/GFatherName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Father's Name" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_mother_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/MotherName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Mother's Name" />
-
-            </android.support.design.widget.TextInputLayout>
-
             <LinearLayout
-                android:id="@+id/sub_layout1"
+                android:id="@+id/Gsub_layout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_dob"
+                    android:id="@+id/input_layout_Gdob"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
 
                     <EditText
-                        android:id="@+id/dob"
+                        android:id="@+id/Gdob"
                         android:layout_width="185dp"
                         android:layout_height="wrap_content"
                         android:hint="DOB - dd/mm/yyyy"
@@ -123,14 +109,14 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_age"
+                    android:id="@+id/input_layout_Gage"
                     android:layout_width="wrap_content"
 
                     android:layout_height="match_parent">
 
 
                     <EditText
-                        android:id="@+id/age"
+                        android:id="@+id/Gage"
                         android:layout_width="185dp"
                         android:layout_height="wrap_content"
                         android:hint="Age"
@@ -140,89 +126,74 @@
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_last_addr"
+                android:id="@+id/input_layout_last_Gaddr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/lAddr"
+                    android:id="@+id/GlAddr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Last Address"
-                     />
+                    />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_curr_addr"
+                android:id="@+id/input_layout_Gcurr_addr"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="-86dp">
 
                 <EditText
-                    android:id="@+id/currAddr"
+                    android:id="@+id/GcurrAddr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Current Address"
-                     />
+                    />
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_curr_prison"
+            <LinearLayout
+                android:id="@+id/Gsub_layout2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-                <EditText
-                    android:id="@+id/Prison"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Current Prison" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_FromTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
 
-            </android.support.design.widget.TextInputLayout>
+                    <EditText
+                        android:id="@+id/GFromTime"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:hint="From"
+                        android:inputType="time"/>
+                </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_Crimes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_ToTime"
+                    android:layout_width="wrap_content"
 
-                <EditText
-                    android:id="@+id/crimes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Crimes" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_relatives"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/relatives"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Relatives" />
+                    android:layout_height="match_parent">
 
 
-            </android.support.design.widget.TextInputLayout>
+                    <EditText
+                        android:id="@+id/GToTime"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:hint="To"
+                        android:inputType="time"/>
+                </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_associates"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/associates"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Associates" />
-            </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/addEntry"
+                android:id="@+id/GaddEntry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -240,11 +211,6 @@
                 app:layout_constraintVertical_bias="0.984" />
 
         </LinearLayout>
-
-
     </ScrollView>
-
-
-
 
 </android.support.constraint.ConstraintLayout>
