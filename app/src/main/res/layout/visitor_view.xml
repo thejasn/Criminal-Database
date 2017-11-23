@@ -33,11 +33,13 @@
             <TextView
                 android:id="@+id/Vlabel0"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="First Name"
                 android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -69,11 +71,12 @@
             <TextView
                 android:id="@+id/Vlabel1"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="Middle Name"
                 android:textAlignment="center"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -105,11 +108,12 @@
             <TextView
                 android:id="@+id/Vlabel2"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="Last Name"
                 android:textAlignment="center"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -150,11 +154,13 @@
             <TextView
                 android:id="@+id/Vlabel3"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="Current Adress"
                 android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -192,11 +198,12 @@
             <TextView
                 android:id="@+id/Vlabel4"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="AGE"
                 android:textAlignment="center"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -232,11 +239,13 @@
             <TextView
                 android:id="@+id/Vlabel5"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="Relation"
                 android:textAlignment="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -273,11 +282,12 @@
             <TextView
                 android:id="@+id/Vlabel6"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="Duration"
                 android:textAlignment="center"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -314,11 +324,13 @@
             <TextView
                 android:id="@+id/Vlabel7"
                 android:layout_width="200dp"
-                android:paddingTop="6dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:paddingTop="6dp"
                 android:text="Criminal id"
                 android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView

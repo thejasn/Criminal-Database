@@ -18,8 +18,11 @@ public class view_Visitor extends Fragment {
 
     private List<Visitor> visitorList = new ArrayList<>();
     private VisitorAdapter VisitorAdapter;
-    public view_Visitor(){
 
+
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 
     @Nullable
@@ -31,7 +34,7 @@ public class view_Visitor extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.view_visitor);
         VisitorAdapter = new VisitorAdapter(visitorList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(VisitorAdapter);
         fillVisitorData();

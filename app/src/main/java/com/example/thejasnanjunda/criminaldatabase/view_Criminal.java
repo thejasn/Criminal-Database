@@ -20,7 +20,9 @@ public class view_Criminal extends Fragment {
 
     private List<Criminal> criminalList = new ArrayList<>();
     private CriminalAdapter criminalAdapter;
-    public view_Criminal() {
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 
     @Override
@@ -31,13 +33,13 @@ public class view_Criminal extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater,@Nullable ViewGroup container,@Nullable  Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.activity_view__criminal, container,false);
 
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
         criminalAdapter = new CriminalAdapter(criminalList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(criminalAdapter);
         fillCriminalData();

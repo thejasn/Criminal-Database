@@ -37,6 +37,7 @@ public class Inserting extends AppCompatActivity {
         adapter.addFragment(new  insert_criminal(), "Criminal");
         adapter.addFragment(new insert_guards(),"Guards");
         adapter.addFragment(new insert_visitor(),"Visitors");
+        adapter.addFragment(new insert_Dependents(),"Dependents");
         viewPager.setAdapter(adapter);
     }
     class ViewPagerAdapter extends FragmentPagerAdapter {

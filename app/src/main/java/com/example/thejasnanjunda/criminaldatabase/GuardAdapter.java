@@ -29,6 +29,7 @@ public class GuardAdapter extends RecyclerView.Adapter<GuardAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Guard guard = list_guards.get(position);
+        holder.Guid.setText(Integer.toString(guard.getUID()));
         holder.Gf_name.setText(guard.getGf_name());
         holder.Gm_name.setText(guard.getGm_name());
         holder.Gl_name.setText(guard.getGl_name());
@@ -36,6 +37,8 @@ public class GuardAdapter extends RecyclerView.Adapter<GuardAdapter.MyViewHolder
         holder.Glast_addr.setText(guard.getGlast_address());
         holder.Gcurr_addr.setText(guard.getGcurr_address());
         holder.Gage.setText(Integer.toString(guard.getGage()));
+        holder.GCELL.setText(guard.getGcell_block());
+        holder.GSALARY.setText(Double.toString(guard.getGsalary()));
         holder.Gdob.setText(guard.getGDOB());
         holder.GFrom.setText(guard.getFromTime());
         holder.GTo.setText(guard.getToTime());
@@ -48,10 +51,11 @@ public class GuardAdapter extends RecyclerView.Adapter<GuardAdapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView Glabel0,Glabel1,Glabel2,Glabel3,Glabel4,Glabel5,Glabel6,Glabel7,Glabel8,Glabel9;
-        public TextView Gf_name,Gm_name,Gl_name,Gfather_name,Glast_addr,Gcurr_addr,Gage,Gdob,GFrom,GTo;
+        public TextView Glabel0,Glabel1,Glabel2,Glabel3,Glabel4,Glabel5,Glabel6,Glabel7,Glabel8,Glabel9,Glabel,Glabel10,Glabel11;
+        public TextView Gf_name,Gm_name,Gl_name,Gfather_name,Glast_addr,Gcurr_addr,Gage,Gdob,GFrom,GTo,Guid,GCELL,GSALARY;
         public MyViewHolder(View itemView) {
             super(itemView);
+            Guid = (TextView) itemView.findViewById(R.id.Guid);
             Gf_name = (TextView) itemView.findViewById(R.id.Gfname);
             Gm_name = (TextView) itemView.findViewById(R.id.Gmname);
             Gl_name = (TextView) itemView.findViewById(R.id.Glname);
@@ -59,6 +63,8 @@ public class GuardAdapter extends RecyclerView.Adapter<GuardAdapter.MyViewHolder
             Glast_addr = (TextView) itemView.findViewById(R.id.Glast_addr);
             Gcurr_addr = (TextView) itemView.findViewById(R.id.Gcurr_addr);
             Gage = (TextView) itemView.findViewById(R.id.GAGE);
+            GCELL = (TextView) itemView.findViewById(R.id.GCELL);
+            GSALARY = (TextView) itemView.findViewById(R.id.GSALARY);
             Gdob = (TextView) itemView.findViewById(R.id.GDOB);
             GFrom = (TextView) itemView.findViewById(R.id.GFrom_time);
             GTo = (TextView) itemView.findViewById(R.id.GTo_time);
@@ -73,6 +79,8 @@ public class GuardAdapter extends RecyclerView.Adapter<GuardAdapter.MyViewHolder
             Glabel7= (TextView) itemView.findViewById(R.id.Glabel7);
             Glabel8= (TextView) itemView.findViewById(R.id.Glabel8);
             Glabel9= (TextView) itemView.findViewById(R.id.Glabel9);
+            Glabel10 = (TextView) itemView.findViewById(R.id.Glabel10);
+            Glabel11 = (TextView) itemView.findViewById(R.id.Glabel11);
 
         }
     }

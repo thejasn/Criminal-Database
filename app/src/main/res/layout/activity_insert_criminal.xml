@@ -8,16 +8,22 @@
 
 
     <ScrollView
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_marginBottom="8dp"
-    android:layout_marginTop="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.31">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scrollbarStyle="insideOverlay"
+        android:soundEffectsEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
 
         <LinearLayout
             android:id="@+id/mainLayout"
@@ -148,8 +154,7 @@
                     android:id="@+id/lAddr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Last Address"
-                     />
+                    android:hint="Cell Block" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -164,8 +169,7 @@
                     android:id="@+id/currAddr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Current Address"
-                     />
+                    android:hint="Current Address" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -178,7 +182,7 @@
                     android:id="@+id/Prison"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Current Prison" />
+                    android:hint="Prison Sentence" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -209,19 +213,7 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_associates"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/associates"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Associates" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
+            <android.support.design.widget.FloatingActionButton
                 android:id="@+id/addEntry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -231,13 +223,31 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="ADD"
+                android:clickable="true"
+                android:paddingBottom="15dp"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:elevation="14dp"
+                app:fabSize="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.968"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.984" />
+                app:layout_constraintVertical_bias="0.984"
+                app:rippleColor="@color/colorAccent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/padd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/padd1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="50sp" />
 
         </LinearLayout>
 

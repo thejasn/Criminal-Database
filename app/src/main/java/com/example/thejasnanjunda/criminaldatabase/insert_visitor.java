@@ -3,6 +3,7 @@ package com.example.thejasnanjunda.criminaldatabase;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -24,7 +26,7 @@ public class insert_visitor extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.activity_insert_visitor,container,false);
-        Button V_add= (Button) v.findViewById(R.id.VaddEntry);
+        FloatingActionButton V_add= (FloatingActionButton) v.findViewById(R.id.VaddEntry);
         TextInputLayout inputLayout_Vfname= (TextInputLayout) v.findViewById(R.id.input_layout_Vfname);
         TextInputLayout inputLayout_Vmname= (TextInputLayout) v.findViewById(R.id.input_layout_Vmname);
         TextInputLayout inputLayout_Vlname= (TextInputLayout) v.findViewById(R.id.input_layout_Vlname);
@@ -47,6 +49,8 @@ public class insert_visitor extends Fragment {
         final EditText Vduration = (EditText)v.findViewById(R.id.Vduration);
         final EditText VRelation = (EditText)v.findViewById(R.id.Vrelatives);
         final EditText V_CID = (EditText) v.findViewById(R.id.V_CID);
+        TextView pad = (TextView) v.findViewById(R.id.textView3);
+        TextView pad1 = (TextView) v.findViewById(R.id.textView4);
 
         V_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,15 +63,15 @@ public class insert_visitor extends Fragment {
                 editor.commit();
                 String[] inputList = new String[9];
                 inputList[0] = Integer.toString(newUID);
-                inputList[1] = V_CID.getText().toString();
-                inputList[2] = Vf_name.getText().toString();
-                inputList[3] = Vm_name.getText().toString();
-                inputList[4] = Vl_name.getText().toString();
-                inputList[5] = Vage.getText().toString();
-                inputList[6] = Vcurr_addr.getText().toString();
-                inputList[8] = Vduration.getText().toString();
+                inputList[1] = Vf_name.getText().toString();
+                inputList[2] = Vm_name.getText().toString();
+                inputList[3] = Vl_name.getText().toString();
+                inputList[4] = Vage.getText().toString();
+                inputList[5] = Vcurr_addr.getText().toString();
+                inputList[6] = Vduration.getText().toString();
                 inputList[7] = VRelation.getText().toString();
-                Visitor visitor = new Visitor(Integer.parseInt(inputList[0]),Integer.parseInt(inputList[1]),inputList[2],inputList[3],inputList[4],Integer.parseInt(inputList[5]),inputList[6],inputList[7],inputList[8]);
+                inputList[8] = V_CID.getText().toString();
+                Visitor visitor = new Visitor(Integer.parseInt(inputList[0]),inputList[1],inputList[2],inputList[3],Integer.parseInt(inputList[4]),inputList[5],Integer.parseInt(inputList[6]),inputList[7],Integer.parseInt(inputList[8]));
                 dbHelper.addVisitor(visitor);
                 Toast.makeText(getActivity(), "Inserted Visitor", Toast.LENGTH_SHORT).show();
 

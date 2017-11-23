@@ -35,7 +35,7 @@ public class view_Guard extends Fragment {
         View view = inflater.inflate(R.layout.activity_view__guard,container,false);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.view_guard);
         guardAdapter = new GuardAdapter(guardList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(guardAdapter);
         fillGuardData();

@@ -41,7 +41,7 @@ public class VisitorAdapter extends RecyclerView.Adapter<VisitorAdapter.MyViewHo
         holder.Vcurr_addr.setText(visitor.getV_address());
         holder.V_age.setText(Integer.toString(visitor.getV_age()));
         holder.V_relation.setText(visitor.getRelation_with_criminal());
-        holder.V_duration.setText(visitor.getDuration());
+        holder.V_duration.setText(Integer.toString(visitor.getDuration()));
         holder.V_CID.setText(Integer.toString(visitor.getCriminal_id()));
 
     }

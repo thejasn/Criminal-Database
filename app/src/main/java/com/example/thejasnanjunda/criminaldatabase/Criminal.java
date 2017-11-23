@@ -8,24 +8,22 @@ public class Criminal {
     private int UID;
     private String f_name,m_name,l_name;
     private int age;
-    private String DOB,last_address,curr_address,father_name,mother_name;
-    private String relatives,crimes,associated;
+    private String DOB, cell_block,curr_address,father_name,mother_name;
+    private String crimes;
     private int current_prison_sentence;
 
-    public Criminal(int UID, String f_name, String m_name, String l_name, int age, String DOB, String last_address, String curr_address, String father_name, String mother_name, String relatives, String crimes, String associated, int current_prison_sentence) {
+    public Criminal(int UID, String f_name, String m_name, String l_name, int age, String DOB, String cell_block, String curr_address, String father_name, String mother_name, String crimes, int current_prison_sentence) {
         this.UID = UID;
         this.f_name = f_name;
         this.m_name = m_name;
         this.l_name = l_name;
         this.age = age;
         this.DOB = DOB;
-        this.last_address = last_address;
+        this.cell_block = cell_block;
         this.curr_address = curr_address;
         this.father_name = father_name;
         this.mother_name = mother_name;
-        this.relatives = relatives;
         this.crimes = crimes;
-        this.associated = associated;
         this.current_prison_sentence = current_prison_sentence;
     }
 
@@ -57,8 +55,8 @@ public class Criminal {
         return mother_name;
     }
 
-    public String getLast_address() {
-        return last_address;
+    public String getCell_block() {
+        return cell_block;
     }
 
     public String getCurr_address() {
@@ -69,17 +67,12 @@ public class Criminal {
         return current_prison_sentence;
     }
 
-    public String getRelatives() {
-        return relatives;
-    }
 
     public String getCrimes() {
         return crimes;
     }
 
-    public String getAssociated() {
-        return associated;
-    }
+
 
     public String getDOB() {
         return DOB;
@@ -113,8 +106,8 @@ public class Criminal {
         this.mother_name = mother_name;
     }
 
-    public void setLast_address(String last_address) {
-        this.last_address = last_address;
+    public void setCell_block(String cell_block) {
+        this.cell_block = cell_block;
     }
 
     public void setCurr_address(String curr_address) {
@@ -125,17 +118,11 @@ public class Criminal {
         this.current_prison_sentence = current_prison_sentence;
     }
 
-    public void setRelatives(String relatives) {
-        this.relatives = relatives;
-    }
 
     public void setCrimes(String crimes) {
         this.crimes = crimes;
     }
 
-    public void setAssociated(String associated) {
-        this.associated = associated;
-    }
 
     public void setDOB(String DOB) {
         this.DOB = DOB;

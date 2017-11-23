@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.thejasnanjunda.criminaldatabase">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,14 +25,38 @@
         </activity>
         <activity android:name=".Menu" />
         <activity android:name=".Inserting" />
-        <activity android:name=".insert_criminal" />
+        <activity
+            android:name=".insert_criminal"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".Viewing" />
         <activity android:name=".view_Criminal" />
-        <activity android:name=".insert_guards" />
-        <activity android:name=".insert_visitor" />
+        <activity
+            android:name=".insert_guards"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".insert_visitor"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".view_Guard" />
         <activity android:name=".VisitorAdapter" />
-        <activity android:name=".view_Visitor"></activity>
+        <activity android:name=".view_Visitor" />
+        <activity android:name=".Searching" />
+        <activity android:name=".ViewQuery" />
+        <activity
+            android:name=".insert_Dependents"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".view_Dependents" />
+        <activity android:name=".Deleting" />
+        <activity android:name=".delete_criminal" />
+        <activity android:name=".Updating" />
+        <activity android:name=".update_criminal" />
+        <activity android:name=".delete_guard" />
+        <activity android:name=".delete_visitor" />
+        <activity android:name=".delete_dependents" />
+        <activity android:name=".update_guard" />
+        <activity android:name=".update_dependent" />
+        <activity android:name=".Aggregate" />
+        <activity android:name=".Login" />
+        <activity android:name=".users"></activity>
     </application>
 
 </manifest>

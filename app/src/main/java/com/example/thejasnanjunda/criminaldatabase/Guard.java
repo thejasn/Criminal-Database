@@ -8,6 +8,8 @@ public class Guard {
     private int UID;
     private String Gf_name,Gm_name,Gl_name;
     private int Gage;
+    private String Gcell_block;
+    private double Gsalary;
     private String GDOB,Glast_address,Gcurr_address,Gfather_name,FromTime,ToTime;
     //private String relatives,crimes,associated;
     //private int current_prison_sentence;
@@ -17,18 +19,36 @@ public class Guard {
         
     }
 
-    public Guard(int UID, String gf_name, String gm_name, String gl_name, int gage, String GDOB, String glast_address, String gcurr_address, String gfather_name, String fromTime, String toTime) {
+    public Guard(int UID, String gf_name, String gm_name, String gl_name, int gage, String gcell_block, double gsalary, String GDOB, String glast_address, String gcurr_address, String gfather_name, String fromTime, String toTime) {
         this.UID = UID;
         Gf_name = gf_name;
         Gm_name = gm_name;
         Gl_name = gl_name;
         Gage = gage;
+        Gcell_block = gcell_block;
+        Gsalary = gsalary;
         this.GDOB = GDOB;
         Glast_address = glast_address;
         Gcurr_address = gcurr_address;
         Gfather_name = gfather_name;
         FromTime = fromTime;
         ToTime = toTime;
+    }
+
+    public String getGcell_block() {
+        return Gcell_block;
+    }
+
+    public void setGcell_block(String gcell_block) {
+        Gcell_block = gcell_block;
+    }
+
+    public double getGsalary() {
+        return Gsalary;
+    }
+
+    public void setGsalary(double gsalary) {
+        Gsalary = gsalary;
     }
 
     public int getUID() {

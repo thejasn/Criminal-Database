@@ -42,6 +42,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="View" />
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update" />
+        <Button
+            android:id="@+id/Delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

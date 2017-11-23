@@ -30,8 +30,10 @@ public class Viewing extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.toolbarView);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setTitle("Prison Manager");
         tabLayout = (TabLayout) findViewById(R.id.tabsView);
         viewPager = (ViewPager) findViewById(R.id.viewpagerView);
+        viewPager.setOffscreenPageLimit(3);
         setupViewPager(viewPager);
 
         tabLayout.setupWithViewPager(viewPager);
@@ -44,6 +46,7 @@ public class Viewing extends AppCompatActivity{
         adapter.addFragment(new  view_Criminal(), "Criminal");
         adapter.addFragment( new view_Guard(),"Guard");
         adapter.addFragment(new view_Visitor(),"Visitor");
+        adapter.addFragment(new view_Dependents(),"Dependents");
         viewPager.setAdapter(adapter);
     }
     class ViewPagerAdapter extends FragmentPagerAdapter {

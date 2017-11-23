@@ -7,8 +7,8 @@
     tools:context="com.example.thejasnanjunda.criminaldatabase.insert_guards">
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31">
+        app:layout_constraintVertical_bias="0.31"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
 
         <LinearLayout
             android:id="@+id/mainGuardLayout"
@@ -126,6 +128,36 @@
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_Gcell_block"
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/Gcell_block"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Salary"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_Gsalary"
+                android:layout_width="wrap_content"
+
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/Gsalary"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Salary"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_last_Gaddr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -134,8 +166,7 @@
                     android:id="@+id/GlAddr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Last Address"
-                    />
+                    android:hint="Last Address" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -150,8 +181,7 @@
                     android:id="@+id/GcurrAddr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Current Address"
-                    />
+                    android:hint="Current Address" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -172,7 +202,7 @@
                         android:layout_width="185dp"
                         android:layout_height="wrap_content"
                         android:hint="From"
-                        android:inputType="time"/>
+                        android:inputType="time" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -187,12 +217,13 @@
                         android:layout_width="185dp"
                         android:layout_height="wrap_content"
                         android:hint="To"
-                        android:inputType="time"/>
+                        android:inputType="time" />
                 </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
-            <Button
+
+            <android.support.design.widget.FloatingActionButton
                 android:id="@+id/GaddEntry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -202,13 +233,32 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="ADD"
+                android:clickable="true"
+                android:paddingBottom="50dp"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:elevation="14dp"
+                app:fabSize="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.968"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.984" />
+                app:layout_constraintVertical_bias="0.984"
+                app:rippleColor="@color/colorAccent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="50sp" />
+
 
         </LinearLayout>
     </ScrollView>
